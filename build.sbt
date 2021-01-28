@@ -39,6 +39,7 @@ val enumratumVersion = "1.5.13"
 val scalaTestVersion = "3.0.5"
 val scalaMockVersion = "4.1.0"
 val mockitoScalaVersion = "1.5.12"
+val ammoniteVersion = "1.6.2"
 
 libraryDependencies ++= Seq(
   "com.pepegar" %% "hammock-core" % hammockVersion,
@@ -62,17 +63,10 @@ libraryDependencies ++= Seq(
   "com.softwaremill.macwire" %% "proxy" % macwireVersion,
   "com.beachape" %% "enumeratum" % enumratumVersion,
   "com.beachape" %% "enumeratum-circe" % enumratumVersion,
-  "org.mockito" %% "mockito-scala-scalatest" % mockitoScalaVersion
+  "org.mockito" %% "mockito-scala-scalatest" % mockitoScalaVersion,
+  "com.lihaoyi" % "ammonite" % ammoniteVersion % "test" cross CrossVersion.full
 )
 
-
-libraryDependencies += {
-  val version = scalaBinaryVersion.value match {
-    case "2.10" => "1.0.3"
-    case _ ⇒ "1.6.2"
-  }
-  "com.lihaoyi" % "ammonite" % version % "test" cross CrossVersion.full
-}
 
 sourceGenerators in Test += Def.task {
   val file = (sourceManaged in Test).value / "amm.scala"

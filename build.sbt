@@ -22,24 +22,24 @@ publishTo := sonatypePublishTo.value
 
 scalaVersion := "2.12.8"
 
-val circeVersion = "0.10.0"
-val hammockVersion = "0.8.6"
-val catsVersion = "1.5.0"
-val macwireVersion = "2.3.3"
+val circeVersion = "0.13.0"
+val hammockVersion = "0.11.3"
+val catsVersion = "2.3.1"
+val macwireVersion = "2.3.7"
 
-val pureConfigVersion = "0.10.1"
-val scalacticVersion = "3.0.5"
-val akkaHttpVersion = "10.1.7"
-val akkaStreamVersion = "2.5.19"
-val jnatsVersion = "2.2.0"
+val pureConfigVersion = "0.14.0"
+val scalacticVersion = "3.2.3"
+val akkaHttpVersion = "10.2.3"
+val akkaStreamVersion = "2.6.11"
+val jnatsVersion = "2.8.0"
 val logBackVersion = "1.2.3"
 val scalaLoggingVersion = "3.9.2"
-val enumratumVersion = "1.5.13"
+val enumeratumVersion = "1.6.1"
 
-val scalaTestVersion = "3.0.5"
-val scalaMockVersion = "4.1.0"
-val mockitoScalaVersion = "1.5.12"
-val ammoniteVersion = "1.6.2"
+val scalaTestVersion = "3.2.3"
+val scalaMockVersion = "5.1.0"
+val mockitoScalaVersion = "1.16.15"
+val ammoniteVersion = "2.3.8"
 
 libraryDependencies ++= Seq(
   "com.pepegar" %% "hammock-core" % hammockVersion,
@@ -61,8 +61,8 @@ libraryDependencies ++= Seq(
   "com.softwaremill.macwire" %% "macrosakka" % macwireVersion % "provided",
   "com.softwaremill.macwire" %% "util" % macwireVersion,
   "com.softwaremill.macwire" %% "proxy" % macwireVersion,
-  "com.beachape" %% "enumeratum" % enumratumVersion,
-  "com.beachape" %% "enumeratum-circe" % enumratumVersion,
+  "com.beachape" %% "enumeratum" % enumeratumVersion,
+  "com.beachape" %% "enumeratum-circe" % enumeratumVersion,
   "org.mockito" %% "mockito-scala-scalatest" % mockitoScalaVersion,
   "com.lihaoyi" % "ammonite" % ammoniteVersion % "test" cross CrossVersion.full
 )

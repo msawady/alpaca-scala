@@ -24,30 +24,45 @@ scalaVersion := "2.12.8"
 
 val circeVersion = "0.10.0"
 val hammockVersion = "0.8.6"
+val catsVersion = "1.5.0"
+val macwireVersion = "2.3.3"
+
+val pureConfigVersion = "0.10.1"
+val scalacticVersion = "3.0.5"
+val akkaHttpVersion = "10.1.7"
+val akkaStreamVersion = "2.5.19"
+val jnatsVersion = "2.2.0"
+val logBackVersion = "1.2.3"
+val scalaLoggingVersion = "3.9.2"
+val enumratumVersion = "1.5.13"
+
+val scalaTestVersion = "3.0.5"
+val scalaMockVersion = "4.1.0"
+val mockitoScalaVersion = "1.5.12"
 
 libraryDependencies ++= Seq(
   "com.pepegar" %% "hammock-core" % hammockVersion,
   "com.pepegar" %% "hammock-circe" % hammockVersion,
-  "com.github.pureconfig" %% "pureconfig" % "0.10.1",
+  "com.github.pureconfig" %% "pureconfig" % pureConfigVersion,
   "io.circe" %% "circe-core" % circeVersion,
   "io.circe" %% "circe-generic" % circeVersion,
   "io.circe" %% "circe-parser" % circeVersion,
-  "org.scalactic" %% "scalactic" % "3.0.5",
-  "org.scalatest" %% "scalatest" % "3.0.5" % "test",
-  "org.scalamock" %% "scalamock" % "4.1.0" % "test",
-  "com.typesafe.akka" %% "akka-http"   % "10.1.7",
-  "com.typesafe.akka" %% "akka-stream" % "2.5.19", // or whatever the latest version is,
-  "io.nats" % "jnats" % "2.2.0",
-  "org.typelevel" %% "cats-core" % "1.5.0",
-  "ch.qos.logback" % "logback-classic" % "1.2.3",
-  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
-  "com.softwaremill.macwire" %% "macros" % "2.3.3" % "provided",
-  "com.softwaremill.macwire" %% "macrosakka" % "2.3.3" % "provided",
-  "com.softwaremill.macwire" %% "util" % "2.3.3",
-  "com.softwaremill.macwire" %% "proxy" % "2.3.3",
-  "com.beachape" %% "enumeratum" % "1.5.13",
-  "com.beachape" %% "enumeratum-circe" % "1.5.21",
-  "org.mockito" %% "mockito-scala-scalatest" % "1.5.12"
+  "org.scalactic" %% "scalactic" % scalacticVersion,
+  "org.scalatest" %% "scalatest" % scalaTestVersion % "test",
+  "org.scalamock" %% "scalamock" % scalaMockVersion % "test",
+  "com.typesafe.akka" %% "akka-http"   % akkaHttpVersion,
+  "com.typesafe.akka" %% "akka-stream" % akkaStreamVersion, // or whatever the latest version is,
+  "io.nats" % "jnats" % jnatsVersion,
+  "org.typelevel" %% "cats-core" % catsVersion,
+  "ch.qos.logback" % "logback-classic" % logBackVersion,
+  "com.typesafe.scala-logging" %% "scala-logging" % scalaLoggingVersion,
+  "com.softwaremill.macwire" %% "macros" % macwireVersion % "provided",
+  "com.softwaremill.macwire" %% "macrosakka" % macwireVersion % "provided",
+  "com.softwaremill.macwire" %% "util" % macwireVersion,
+  "com.softwaremill.macwire" %% "proxy" % macwireVersion,
+  "com.beachape" %% "enumeratum" % enumratumVersion,
+  "com.beachape" %% "enumeratum-circe" % enumratumVersion,
+  "org.mockito" %% "mockito-scala-scalatest" % mockitoScalaVersion
 )
 
 
